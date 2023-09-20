@@ -1,7 +1,7 @@
 ---
 layout: collection
 entries_layout: grid
-permalink: /year-archive/
+permalink: /team/
 title: "Teams"
 author_profile: true
 redirect_from:

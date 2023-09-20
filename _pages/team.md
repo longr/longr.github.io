@@ -1,6 +1,5 @@
 ---
 layout: collection
-entries_layout: grid
 permalink: /team/
 title: "Teams"
 author_profile: true

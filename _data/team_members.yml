@@ -1,0 +1,9 @@
+- name: Robin Long
+  photo: profile.png
+  info: RSE 2021
+  summary: A bit about me would be good.
+
+- name: Chris Jewell
+  photo: profile.png
+  info: Prof Stats
+  summary: A bit about him would be good.

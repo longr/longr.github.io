@@ -1,5 +1,6 @@
 ---
-layout: gridlay
+layout: collection
+entries_layout: grid
 title: "Group"
 permalink: /team/
 author_profile: true

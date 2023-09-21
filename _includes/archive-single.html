@@ -41,9 +41,8 @@
 	 
     {% if post.excerpt and site.read_more != 'enabled' %}
     <p>
-      {% if post.image %}  <div class="archive__item-photo">
+      {% if post.image %}
 	<img src="/images/{{ post.image }}" max-height="150" align="right">
-	</div>
       {% endif %}
       {% if post.start %}
       {% if post.end %}

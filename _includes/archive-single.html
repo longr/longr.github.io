@@ -41,8 +41,9 @@
 	 
     {% if post.excerpt and site.read_more != 'enabled' %}
     <p>
-      <img src="/images/profile.png" width="230" align="right">
-      
+      {% if post.image %}
+      <img src="/images/{{ post.image }}" width="230" align="right">
+      {% endif %}
       {% if post.start %}
       {% if post.end %}
     <p>({{ post.start }} - {{ post.end}} )</strong></p>

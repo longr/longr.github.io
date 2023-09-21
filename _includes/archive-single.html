@@ -26,32 +26,23 @@
         <a href="{{ post.link }}">{{ title }}</a> 
       {% else %}
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
+	{% endif %}
     </h2>
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
-    {% endif %}
+    
+    
 
-        {% if post.collection == 'teaching' %}
-          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif post.collection == 'publications' %}
-          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif post.date %}
-        {% endif %}
-	 
-    {% if post.excerpt and site.read_more != 'enabled' %}
     <p>
       {% if post.image %}
-	<img src="/images/{{ post.image }}" max-height="150" align="right">
+      <img src="/images/{{ post.image }}" max-height="150" align="right">
       {% endif %}
       {% if post.start %}
       {% if post.end %}
     <p>({{ post.start }} - {{ post.end}} )</strong></p>
-    {% else %}
-    <p>( {{ post.start}} - present )</p>
-    {% endif %}
+{% else %}
+<p>( {{ post.start}} - present )</p>
+{% endif %}
     
-    {% endif %}
+{% endif %}
     
     {% if post.role %}
     <p><strong> {{ post.role }} </strong></p>
@@ -59,21 +50,9 @@
     
     <p class="archive__item-excerpt" itemprop="description">{{ post.content | markdownify }}</p>
 </p>
-{% elsif post.excerpt and post.link %}
-    <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
-    {% endif %}
 
     {% if post.link %}
     <p><strong><a href="{{ post.link }}" rel="permalink"> Find out more</a></strong></p>
     {% endif %}
-
-    {% if post.citation and post.paperurl %}
-      <p>Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a></p>
-    {% elsif post.citation %}
-      <p>Recommended citation: {{ post.citation }} </p>
-    {% elsif post.paperurl %}
-      <p>Download <a href=" {{ post.paperurl }} "><u>here</u></a></p>
-    {% endif %}
-
   </article>
 </div>

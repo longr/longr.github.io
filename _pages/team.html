@@ -6,14 +6,14 @@ author_profile: true
 ---
 
 {% include base_path %}
-<h2> Current Members</h2>
+<h1> Current Members</h1>
 {% for post in site.portfolio %}
 {% if post.end == None %}
 {% include archive-single.html %}
 {% endif %}
 {% endfor %}
 
-<h2> Past Members </h2>
+<h1> Past Members </h1>
 {% for post in site.portfolio %}
 {% if post.end  %}
 {% include archive-single.html %}

@@ -1,58 +1,58 @@
 {% include base_path %}
 
 {% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% capture teaser %}{{ post.header.teaser }}{% endcapture %}
 {% else %}
-  {% assign teaser = site.teaser %}
+{% assign teaser = site.teaser %}
 {% endif %}
 
 {% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
-  {% assign title = post.title %}
+{% assign title = post.title %}
 {% endif %}
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src="/images/profile.png"
-          alt="">
-      </div>
+    <div class="archive__item-teaser">
+      <img src="/images/profile.png"
+           alt="">
+    </div>
     {% endif %}
-
+    
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> 
+      <a href="{{ post.link }}">{{ title }}</a> 
       {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-	{% endif %}
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      {% endif %}
     </h2>
     
     
-
-    <p>
-      {% if post.image %}
-      <img src="/images/{{ post.image }}" max-height="150" align="right">
-      {% endif %}
-      {% if post.start %}
-      {% if post.end %}
+    
+    
+    {% if post.image %}
+    <img src="/images/{{ post.image }}" max-height="150" align="right">
+    {% endif %}
+    {% if post.start %}
+    {% if post.end %}
     <p>({{ post.start }} - {{ post.end}} )</strong></p>
 {% else %}
 <p>( {{ post.start}} - present )</p>
 {% endif %}
-    
-{% endif %}
-    
-    {% if post.role %}
-    <p><strong> {{ post.role }} </strong></p>
-    {% endif %}
-    
-    <p class="archive__item-excerpt" itemprop="description">{{ post.content | markdownify }}</p>
-</p>
 
-    {% if post.link %}
-    <p><strong><a href="{{ post.link }}" rel="permalink"> Find out more</a></strong></p>
+{% endif %}
+
+{% if post.role %}
+<p><strong> {{ post.role }} </strong></p>
+{% endif %}
+
+<p class="archive__item-excerpt" itemprop="description">{{ post.content | markdownify }}</p>
+
+
+{% if post.link %}
+<p><strong><a href="{{ post.link }}" rel="permalink"> Find out more</a></strong></p>
     {% endif %}
   </article>
 </div>

@@ -16,18 +16,24 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
-        <img src="/images/profile.png"
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
           alt="">
       </div>
     {% endif %}
 
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> 
+        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
+    
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
@@ -37,37 +43,15 @@
         {% elsif post.collection == 'publications' %}
           <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.date %}
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
-	 
+
     {% if post.excerpt and site.read_more != 'enabled' %}
-    <p>
-      {% if post.image %}  <div class="archive__item-photo">
-	<img src="/images/{{ post.image }}" max-height="150" align="right">
-	</div>
-      {% endif %}
-      {% if post.start %}
-      {% if post.end %}
-    <p>({{ post.start }} - {{ post.end}} )</strong></p>
-    {% else %}
-    <p>( {{ post.start}} - present )</p>
-    {% endif %}
-    
-    {% endif %}
-    
-    {% if post.role %}
-    <p><strong> {{ post.role }} </strong></p>
-    {% endif %}
-    
-    <p class="archive__item-excerpt" itemprop="description">{{ post.content | markdownify }}</p>
-</p>
-{% elsif post.excerpt and post.link %}
+    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+    {% elsif post.excerpt and site.read_more == 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
-
-    {% if post.link %}
-    <p><strong><a href="{{ post.link }}" rel="permalink"> Find out more</a></strong></p>
-    {% endif %}
-
+    
     {% if post.citation and post.paperurl %}
       <p>Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a></p>
     {% elsif post.citation %}

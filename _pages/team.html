@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /team/
-title: "Blog posts"
+title: "Group"
 author_profile: true
 ---
 
@@ -9,13 +9,13 @@ author_profile: true
 <h1> Current Members</h1>
 {% for post in site.portfolio %}
 {% if post.end == None %}
-{% include archive-single.html %}
+{% include archive-single-group.html %}
 {% endif %}
 {% endfor %}
 
 <h1> Past Members </h1>
 {% for post in site.portfolio %}
 {% if post.end  %}
-{% include archive-single.html %}
+{% include archive-single-group.html %}
 {% endif %}
 {% endfor %}

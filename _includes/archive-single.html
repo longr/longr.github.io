@@ -16,12 +16,7 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
+        <img src="/images/profile.png"
           alt="">
       </div>
     {% endif %}
@@ -50,9 +45,9 @@
       
       {% if post.start %}
       {% if post.end %}
-    <p><strong> {{ post.start }} - {{ post.end}} </strong></p>
+    <p>({{ post.start }} - {{ post.end}} )</strong></p>
     {% else %}
-    <p><strong> {{ post.start}} </strong></p>
+    <p>( {{ post.start}} - present )</p>
     {% endif %}
     
     {% endif %}

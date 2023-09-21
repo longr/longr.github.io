@@ -6,17 +6,17 @@ author_profile: true
 ---
 
 {% include base_path %}
+
+<h2 class="archive__subtitle">Current</h2>
 {% for post in site.portfolio %}
-{% if post.end %}
-    <h2 class="archive__subtitle">Past</h2>
-{% else %}
-    <h2 class="archive__subtitle">Current</h2>
-{% endif %}   
+{% if !post.end  %}
 {% include archive-single.html %}
+{% endif %}
 {% endfor %}
 
-
-{% include base_path %}
+<h2 class="archive__subtitle">Past</h2>
 {% for post in site.portfolio %}
-  {% include archive-single.html %}
+{% if post.end  %}
+{% include archive-single.html %}
+{% endif %}
 {% endfor %}

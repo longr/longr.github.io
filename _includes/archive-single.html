@@ -48,8 +48,13 @@
     <p>
       <img src="/images/profile.png" width="230" align="right">
       
-    {% if post.start %}
-    <p><strong> {{ post.start }} </strong></p>
+      {% if post.start %}
+      {% if post.end %}
+    <p><strong> {{ post.start - post.end}} </strong></p>
+    {% else %}
+    <p><strong> {{ post.start}} </strong></p>
+    {% endif %}
+    
     {% endif %}
     
     {% if post.role %}

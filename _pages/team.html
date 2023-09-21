@@ -13,7 +13,6 @@ author_profile: true
 
 {% include base_path %}
 
-<h2>Current</h2>
 {% include base_path %}
 {% for post in site.portfolio %}
 {% if !post.end  %}
@@ -21,7 +20,6 @@ author_profile: true
 {% endif %}
 {% endfor %}
 
-<h2 class="archive__subtitle">Past</h2>
 {% include base_path %}
 {% for post in site.portfolio %}
 {% if post.end  %}

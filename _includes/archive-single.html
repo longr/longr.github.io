@@ -46,8 +46,18 @@
         {% endif %}
 	 
     {% if post.excerpt and site.read_more != 'enabled' %}
-<p>
-	 <img src="/images/profile.png" width="230" align="right">
+    <p>
+      <img src="/images/profile.png" width="230" align="right">
+      
+      {% if post.start %}
+    <p> {{ post.start }} </p>
+    <br>
+    {% endif %}
+    
+    {% is post.role %}
+    <p> {{ post.role }} </p>
+    {% endif %}
+    
     <p class="archive__item-excerpt" itemprop="description">{{ post.content | markdownify }}</p>
 </p>
 {% elsif post.excerpt and site.read_more == 'enabled' %}

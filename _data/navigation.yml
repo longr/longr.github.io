@@ -1,13 +1,10 @@
 # main links links
 main:
-  - title: "Roles"
-    url: /roles/
+  - title: "CV"
+    url: /cv/
 
-  - title: "Publications"
-    url: /publications/
+  - title: "Blog Posts"
+    url: /year-archive/
 
-  - title: "Software"
-    url: /software/
-
-  - title: "Group"
+  - title: "Team"
     url: /team/

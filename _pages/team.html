@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 {% include base_path %}
-<h1> Current Members</h1>
+<h2> Current Members</h2>
 {% for post in site.portfolio %}
 {% if post.end == None %}
 {% include archive-single-group.html %}
@@ -15,7 +15,7 @@ author_profile: true
 <br>
 <br>
 <hr>
-<h1> Past Members </h1>
+<h2> Past Members </h2>
 {% for post in site.portfolio %}
 {% if post.end  %}
 {% include archive-single-group.html %}

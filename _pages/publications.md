@@ -4,9 +4,6 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
-
-## Publications
-
 ### Submitted
 
 *   Martinez-Hernandez, I., Killick, R. (2022) Changepoint Estimation for Daily Home Activity Data Using a Continuous Approach _Submitted._

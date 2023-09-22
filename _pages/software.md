@@ -4,8 +4,6 @@ title: "Software"
 author_profile: true
 permalink: /software/
 ---
-## Software
-
 ### `changepoint`: Methods for Changepoint dectection in R
 
 I created and a changepoint detection library in R called [`changepoint`](https://cran.r-project.org/package=changepoint).  It implements various mainstream and specialised changepoint methods for finding single and multiple changepoints within data. Many popular non-parametric and frequentist methods are included. The `cpt.mean()`, `cpt.var()`, `cpt.meanvar()` functions should be your first point of call.
@@ -16,6 +14,7 @@ Suggestions for future improvements or bug fixes are welcomed Email me or post a
 
 Accompanying introductory paper Copy available [here](http://www.jstatsoft.org/v58/i03/)
 
+___
 
 ### `changepoint.np`: Methods for Nonparametric Changepoint Detection in R
 
@@ -25,6 +24,7 @@ This package is available on [CRAN](https://cran.r-project.org/package=changepoi
 
 Suggestions for future improvements or bug fixes are welcomed Email me or post an issue or pull request on [Github](https://github.com/KayleaHaynes/changepoint.np)
 
+___
 
 ### `EnvCpt`: Detection of Structural Changes in Climate and Environment Time Series in R
 
@@ -34,6 +34,7 @@ This package is	available on [CRAN](https://cran.r-project.org/package=EnvCpt)
 
 Suggestions for future improvements or bug fixes are welcomed Email me or post an issue or pull request on [Github](https://github.com/rkillick/EnvCpt)
 
+___
 
 ### `changepoint.geo`: Title: Geometrically Inspired Multivariate Changepoint Detection in R
 
@@ -42,6 +43,8 @@ Implements the high-dimensional changepoint detection method GeomCP and the rela
 This package is	available on [CRAN](https://cran.r-project.org/package=changepoint.geo)
 
 Suggestions for future improvements or bug fixes are welcomed Email me or post an issue or pull request on [Github](https://github.com/grundy95/changepoint.geo)
+
+___
 
 ### `changepoint.influence`: Package to Calculate the Influence of the Data on a Changepoint Segmentation in R
 

@@ -4,8 +4,6 @@ title: "Roles"
 author_profile: true
 permalink: /roles/
 ---
-## Roles
-
 ### Editorial
 
 * Co-Editor in Chief [Journal of Statistical Software](https://www.jstatsoft.org/index) 2020-Present

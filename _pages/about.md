@@ -8,16 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-I am a Research Software Engineer at Lancaster University. I work in the Data Science Institute to support all Researchers at Lancaster University. I will be providing training to all Researchers at the University in research computing and software skills such as:
+I am a Senior Research Software Engineer at the UK Centre for Ecology and Hydrology.  I am helping to setup a newly formed Research Software Engineering Group in [UKCEH](https://www.ceh.ac.uk/).
 
-* Using the command line
-* Git for version control
-* Introduction to R/Python
+Previously I worked as a Research Software Engineer for the [Data Science Institute](www.lancs.ac.uk/dsi) [Lancaster University](www.lancaster.ac.uk), providing training and collaborating on research software with researchers across the University. 
 
-I also provide support for the N8 computing cluster “Bede” for researchers at Lancaster.
+Before this I worked as a Research Software Engineer for [Research Software Engineering Group](https://research-it.manchester.ac.uk/services/research-software-enginee) at the [University of Manchester](). Here I worked on [BioExcel](https://bioexcel.eu/) as part of the [eScience Lab](https://esciencelab.org.uk/) developing and improving software and tools used for computational biomolecular research and analysis workflows.
 
-Previously I worked as a Research Software Engineer at the University of Manchester, working for Research IT. Here I worked on BioExcel as part of Carol Goble’s eScience Lab Group developing and improving software and tools used for computational biomolecular research and analysis workflows.
+I am a 2017 Fellow of the [Software Sustainability Institute (SSI)].(https://www.software.ac.uk/) Through this, I have created and taught several courses on various skills and software for research, and hosted Research forums for researchers from all disciplines to come together and exchange ideas and support each other in using software as part of their research.
 
-I am a 2017 Fellow of the Software Sustainability Institute. Through this, I have created and taught several courses on various skills and software for research, and hosted Research forums for researchers from all disciplines to come together and exchange ideas and support each other in using software as part of their research.
-
-I previously worked at Lancaster University in the Experimental Particle Physics Group where I maintained and supported the GridPP computing cluster.
+I previously worked at Lancaster University in the [Experimental Particle Physics Group](https://www.lancaster.ac.uk/physics/research/particle-and-accelerator-physics/experimental-particle-physics/) where I maintained and supported the [GridPP](https://www.gridpp.ac.uk/) computing cluster.

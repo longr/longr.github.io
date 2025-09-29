@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Robin is a Senior Research Software Engineer with a background in experimental particle physics.  Robin joined UKCEH in 2024 helping establish a new Research Software Engineering team within the Environmental Data Science Group, working on reproducible systems for multi-disciplinary environmental science.
+Robin is a Senior Research Software Engineer in the [Digital Research Group](https://cehacuk.sharepoint.com/sites/NationalCapabilityandDigitalResearch/SitePages/Digital-Research-Group.aspx) at [UKCEH](https://www.ceh.ac.uk/our-science/science-areas).  Robin joined UKCEH in 2024 helping establish a new Research Software Engineering team within the Environmental Data Science Group, working on reproducible systems for multi-disciplinary environmental science. 
  
 Robin has a passion for reproducible research and sustainable software; embedding these within research pipelines from the start. Robin is keen to discuss how they can support sustainability and reproducibility in your research initiatives.
  
